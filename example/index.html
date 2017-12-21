@@ -7,7 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        .feedback,.fb,.fb1 {
+        .feedback,
+        .fb,
+        .fb1 {
             color: red;
             -moz-user-select: none;
             -webkit-user-select: none;
@@ -18,19 +20,23 @@
 
 <body>
     <div id="app">
-        <p v-feedback="{feedbackClass:'fb1'}" class="test">123</p>
+        <p v-feedback="{feedbackClass:'fb1'}" v-if="isShow" class="test">123</p>
         <p v-feedback class="test">456</p>
         <p v-feedback class="test">789</p>
+        <button @click="isShow = !isShow">trigger</button>
     </div>
     <script src="https://cdn.bootcss.com/vue/2.5.9/vue.js"></script>
     <script src="../dist/vue-touch-feedback.js"></script>
     <script>
         console.log(VueTouchFeedback)
-        Vue.use(VueTouchFeedback,{
-            feedbackClass:'fb'
+        Vue.use(VueTouchFeedback, {
+            feedbackClass: 'fb'
         })
         new Vue({
-            el: '#app'
+            el: '#app',
+            data: {
+                isShow: true
+            }
         })
     </script>
 </body>
