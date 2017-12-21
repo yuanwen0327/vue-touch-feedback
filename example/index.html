@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        .feedback {
+        .feedback,.fb,.fb1 {
             color: red;
             -moz-user-select: none;
             -webkit-user-select: none;
@@ -18,15 +18,17 @@
 
 <body>
     <div id="app">
-        <p v-touch class="test">123</p>
-        <p v-touch class="test">456</p>
-        <p v-touch class="test">789</p>
+        <p v-feedback="{feedbackClass:'fb1'}" class="test">123</p>
+        <p v-feedback class="test">456</p>
+        <p v-feedback class="test">789</p>
     </div>
     <script src="https://cdn.bootcss.com/vue/2.5.9/vue.js"></script>
     <script src="../dist/vue-touch-feedback.js"></script>
     <script>
         console.log(VueTouchFeedback)
-        Vue.use(VueTouchFeedback)
+        Vue.use(VueTouchFeedback,{
+            feedbackClass:'fb'
+        })
         new Vue({
             el: '#app'
         })

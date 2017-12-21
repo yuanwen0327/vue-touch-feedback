@@ -42,7 +42,6 @@ var eventBind = function (_this) {
 var TouchFeedback = function (el, option) {
     this._el = typeof el == 'string' ? document.querySelector(selector) : el;
     option = option || {};
-    // this._bindProp = option.bindProp || 'data-touchFeedback';
     this._feedbackClass = option.feedbackClass || 'feedback';
     eventBind(this);
 };
