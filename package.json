@@ -2,7 +2,7 @@
   "name": "vue-touch-feedback-plugin",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./lib/vue-touch-feedback.js",
   "scripts": {
     "build": "webpack --config build/webpack.prod.js",
     "dev": "webpack --watch --config  build/webpack.dev.js"

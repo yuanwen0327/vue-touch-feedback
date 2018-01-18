@@ -12,8 +12,7 @@ module.exports = {
   },
   devtool: 'source-map',
   output: {
-    path: resolve('/dist'),
-    // path: '/dev/js/libs/jqPlugin',
+    path: resolve('/lib'),
     filename: '[name].js',
     library: 'VueTouchFeedback',
     libraryTarget: 'umd'
