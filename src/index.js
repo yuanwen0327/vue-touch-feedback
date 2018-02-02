@@ -1,5 +1,5 @@
 import TouchFeedback from './feedback'
-import defaults from 'lodash/defaults'
+import objectAssign from 'object-assign'
 
 let hashMap = []
 let count = 0
@@ -8,7 +8,7 @@ export default {
     install(Vue, options = {}) {
         Vue.directive('feedback', {
             bind(el, binding) {
-                hashMap[count] = new TouchFeedback(el, defaults(binding.value, options))
+                hashMap[count] = new TouchFeedback(el, objectAssign({} ,options , binding.value ))
                 el.dataset.id = count
                 count++
             },
