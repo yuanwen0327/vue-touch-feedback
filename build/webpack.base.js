@@ -15,7 +15,8 @@ module.exports = {
     path: resolve('/lib'),
     filename: '[name].js',
     library: 'VueTouchFeedback',
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
+    umdNamedDefine: true
   },
   resolve: {
     modules: [path.resolve('./node_modules'), path.resolve('./src')],
