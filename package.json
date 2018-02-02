@@ -1,14 +1,23 @@
 {
   "name": "vue-touch-feedback-plugin",
-  "version": "1.0.1",
-  "description": "",
+  "version": "1.0.2",
+  "description": "a touch feedback directive for vue",
+  "keywords": [
+    "feedback",
+    "directive",
+    "vue"
+  ],
   "main": "./lib/vue-touch-feedback.js",
   "scripts": {
     "build": "webpack --config build/webpack.prod.js",
     "dev": "webpack --watch --config  build/webpack.dev.js"
   },
-  "author": "yuanwen",
+  "author": "yuanwen <yuanwen0327@outlook.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuanwen0327/vue-touch-feedback-plugin.git"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
